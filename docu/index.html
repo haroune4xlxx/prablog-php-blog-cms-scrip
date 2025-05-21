@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PRABLO pragmatic blogging &mdash; Manual</title>
+  <meta name="description" content="Installation &amp; Setup &mdash; Documentation">
+	<link href="assets/bootstrap.css" rel="stylesheet">
+	<link href="assets/dashboard.css" rel="stylesheet">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<nav id="top" class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button
+          type="button"
+          class="navbar-toggle collapsed"
+          data-toggle="collapse"
+          data-target="#navbar"
+          aria-expanded="false"
+          aria-controls="navbar"
+        >
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#intro">Introduction</a></li>
+          <li class="active"><a href="#pre-install">Pre-Installation</a></li>
+          <li class="active"><a href="#install">Installation</a></li>
+          <li class="active"><a href="#settings">Settings</a></li>
+          <li class="active"><a href="#locals">Localizations</a></li>
+          <li class="active"><a href="#styling">Styling</a></li>
+          <li class="active"><a href="#support">Help &amp; Support</a></li>
+          <li class="active"><a href="#ftp">FTP Hint</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul class="nav nav-sidebar">
+					<li class="active"><a href="index.html#top"><b>P R A B L O</b></a></li>
+				</ul>
+				<p class="text-muted">
+					<tt>
+            <small>
+						  Prg. Version: 1.0<br />
+              Doc. Version: B<br />
+						  Doc. Updated: Aug. 2017
+            </small>
+					</tt>
+				</p>
+			</div>
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<div class="jumbotron">
+					<div class="row">
+            <div class="col-md-3">
+              <p class="text-center">
+                <a class="logo" href="index.html#top">
+                  <abbr title="[PRA]GMATIC [BLO]GGING" style="text-decoration:none;">P R A B L O</abbr>
+                  <img src="assets/screenshot.png" class="img-responsive img">
+                </a>
+                <strong>pragmatic blogging</strong>
+              </p>
+            </div>
+						<div class="col-md-9">
+							<h2 class="mt-0"><br>Installation &amp; Setup &mdash; Docu</h2>
+							<p class="lead">
+								If you have any questions that are beyond the scope of this help file,
+                please do not hesitate to contact me via
+                <a href="https://codecanyon.net/user/adilbo#contact" target="_blank">Support Form</a>.<br>
+								I am always happy to help if you have any questions relating to this script.<br />
+							</p>
+						</div>
+					</div>
+				</div>
+
+<!-- ************************* -->
+<!-- ******* Introduction √ -->
+<!-- ************************* -->
+
+				<h2 id="intro" class="page-header">Introduction</h2>
+				<p class="lead">
+          I put a lot of love into the new version of this script.
+        </p>
+				<p>
+					If you have any questions or would like to give me feedback,
+          I would love to hear them.<br>
+          Your feedback is what inspires new ideas for future updates.<br>
+          You can post your questions and feedback on my
+          <a href="https://codecanyon.net/user/adilbo#contact" target="_blank">Support Form</a>.
+				</p>
+				<p class="lead">
+          As always, a BIG Thank You to all of my buyers,<br>
+          I really appreciate your continued support &amp; trust in me. &nbsp;
+          <small><i class="fa fa-heart text-danger"></i></small></p>
+
+<!-- ************************* -->
+<!-- ******* Pre-Installation √ -->
+<!-- ************************* -->
+
+				<h2 id="pre-install" class="page-header">Pre-Installation</h2>
+
+				<h3>1. Unzip the Script</h3>
+				<p>Unzip the ZIP file and take a look around at the file structure.
+        You should see 3 folders and 3 files.</p>
+				<p>
+          This is a new version, and <strong>not</strong> an update.
+          You will want to install the script with a new database.
+        </p>
+
+				<h3>2. Create a new Database</h3>
+				<p>
+          First step is to create a mySQL database,
+          and if you do not have a default one, a database user.<br>
+          This process is explained in great detail on many websites
+          and web hosts.<br>
+          Once you have the database setup, you will need:</p>
+				<ul class="list-group" style="max-width:400px;">
+					<li class="list-group-item"><b>Hostname</b>
+            <span class="pull-right">usually 'localhost'</span></li>
+					<li class="list-group-item"><b>db Name</b>
+            <span class="pull-right">i.e. PRABLO</span></li>
+					<li class="list-group-item"><b>db User</b>
+            <span class="pull-right">i.e. db0815</span></li>
+					<li class="list-group-item"><b>db Password</b>
+            <span class="pull-right">i.e. pass4711</span></li>
+				</ul>
+
+				<h3>3. Upload Script</h3>
+				<p>Upload all the files you unzipped to your web host,
+        keeping the file system intact.</p>
+				<div class="alertMsg info">
+					<div class="msgIcon pull-left"><i class="fa fa-info-circle"></i></div>
+					Be sure to CHMOD (permissions) the <em>/inc/</em> folder and
+          the <em>/inc/settings.php</em> file to 755.
+				</div>
+				<p>You should now have the following folder and files on your host account:</p>
+				<img src="assets/file_structure.png" class="img-responsive img" />
+
+<!-- ************************* -->
+<!-- ******* Installation √ -->
+<!-- ************************* -->
+
+				<h2 id="install" class="page-header">Installation</h2>
+				<h3>1. Run the Online Setup Wizard</h3>
+				<p>Installation is quite easy and only takes a few minutes.</p>
+				<div class="alertMsg warning" style="color:#444;">
+					<div class="msgIcon pull-left"><i class="fa fa-warning"></i></div>
+					Again, make sure the <em>/inc/</em> folder  and the
+          <em>/inc/settings.php</em> file has been CHMOD to 755 or
+          installation will fail.
+				</div>
+				<p>
+					Once the script has finished uploading, simply go to
+          <code>http://www.example.com/inc/install.php</code><br>
+          (or <code>http://www.example.com/SUBFOLDER/inc/install.php</code>
+          wherever subfolder you uploaded it to)
+          and follow the on-screen instructions.<br />
+					Easy to do, just follow the defaults and plug in your specific information.
+				</p>
+				<div class="alertMsg warning" style="color:#444;">
+					<div class="msgIcon pull-left"><i class="fa fa-warning"></i></div>
+					Only one subfolder is allowed <em>http://example.com/subfolder/</em> will work
+          <em>http://example.com/sub/folder/</em> will fail.
+				</div>
+				<h3>2. Server Configuration Check</h3>
+				<p>
+					<strong>The script REQUIRES PHP 5.3+ &amp; MySQLi Connection.</strong>
+          <br />
+					There is a <b>Server Configuration Check</b> that will display errors
+          before you will be able to install the script.<br>
+          If all checks out, great. If not, you will not see the form and
+          will not be able to install the script.<br>
+          Check with you host, and see if there is anything they can do for you.
+				</p>
+
+				<h3>3. Database Configuration</h3>
+				<ul class="list-group" style="max-width:400px;">
+					<li class="list-group-item">
+						<span class="pull-right">
+            usually <em>localhost</em></span>
+						<b>The hostname</b>
+					</li>
+          <li class="list-group-item">
+            <span class="pull-right">
+            The name of the database</span>
+            <b>db Name</b>
+          </li>
+					<li class="list-group-item">
+						<span class="pull-right">Your username to access the database</span>
+						<b>db User</b>
+					</li>
+					<li class="list-group-item">
+						<span class="pull-right">Your database password</span>
+						<b>db Password</b>
+					</li>
+				</ul>
+				<p>Once you have input your database informations, check the admin account.</p>
+
+        <h3>4. The Admin Account</h3>
+        <p>
+          Complete the admin account form. This is the administrator for the script.<br>
+          This admin account cannot be deleted through any web UI,
+          only from within the <em>/inc/settings.php</em> file.<br>
+          Download the File with your FTP Client,
+          use an Editor (i.e. <a target="_blank" href="https://notepad-plus-plus.org/download/">Notepad++</a>), make your changes and Upload the file by FTP.<br />
+        </p>
+
+				<h3>5. Script Settings</h3>
+				<p>
+					Again, follow the defaults and plug in your site's specific information.<br>
+          You can set your Administrator Account Data and Site Parameter to be anything you would like. See <a href="#settings">Settings</a> Section for mor Details.
+				</p>
+        <p>
+          Once you have filled in the information for the Admin,
+          click the <code>Go! Start the Installation</code> button to complete the installation.
+        </p>
+        <p>If everything was configured correctly, you will see the following:</p>
+        <b>For mySQL</b>:
+        <div class="alertMsg success">
+          <div class="msgIcon pull-left"><i class="fa fa-check"></i></div>
+          Dump imported successfully!
+        </div>
+        <b>For Config</b>:
+        <div class="alertMsg success">
+          <div class="msgIcon pull-left"><i class="fa fa-check"></i></div>
+          File "settings.php" written successfully!
+        </div>
+        <p>
+          If you do not see the messages above, and get a blank screen or an error &mdash;
+          check your error logs.<br>
+          Most of the time this happens due to your web account/host
+          not supporting a needed function.<br>
+          This can happen even if you pass the pre-installation check.
+          Check with your web host and see if there is any thing they can do to help.
+        </p>
+        <p>
+          If you have any questions on this, please do not hesitate to contact me via my
+          <a href="https://codecanyon.net/user/adilbo#contact" target="_blank">Support Center</a>.
+        </p>
+				<p>
+          Once installation is completed, you will need to go back into your FTP application,
+          and rename the installation file before you log in as Admin.
+        </p>
+				<div class="alertMsg warning" style="color:#444;">
+					<div class="msgIcon pull-left"><i class="fa fa-warning"></i></div>
+					For security reasons and to stop any possible re-installations please,
+          RENAME the <em>/inc/install.php</em> file.
+				</div>
+
+<!-- ************************* -->
+<!-- ******* Settings √ -->
+<!-- ************************* -->
+
+				<h2 id="settings" class="page-header">Settings</h2>
+				<p>
+          Once the script is installed,
+          you can update the Site Settings after opening the <em>/inc/settings.php</em>
+          in your editor (e.g. <a target="_blank" href="https://notepad-plus-plus.org/download/">Notepad++</a>).<br>
+          This are the Site Settings that you can use:
+        </p>
+				<ul class="list-group" style="max-width:800px;">
+
+          <strong>Database Settings</strong><br>
+          <li class="list-group-item"><b>Hostname</b> (usually localhost)
+            <small class="label label-danger">REQUIRED</small>
+            <br><code>$mysqli_hostname="localhost";</code></li>
+          <li class="list-group-item"><b>Database Name</b> (usually PRABLO)
+            <small class="label label-danger">REQUIRED</small>
+            <br><code>$mysqli_database="PRABLO";</code></li>
+          <li class="list-group-item"><b>Database Username</b>
+            <small class="label label-danger">REQUIRED</small>
+            <br><code>$mysqli_username="";</code></li>
+          <li class="list-group-item"><b>Database Password</b>
+            <small class="label label-danger">REQUIRED</small>
+            <br><code>$mysqli_password="";</code></li>
+          <li style="list-style-type:none;">&nbsp;</li>
+
+          <strong>Admin Account Settings</strong><br>
+          <li class="list-group-item"><b>Login Username</b>
+            <small class="label label-danger">REQUIRED</small>
+            <small class="label label-success">SHOULD BE CHANGED</small>
+            <br><code>$admin_username="demo";</code></li>
+          <li class="list-group-item"><b>Login Password</b>
+            <small class="label label-danger">REQUIRED</small>
+            <small class="label label-success">SHOULD BE CHANGED</small>
+            <br><code>$admin_password="demo";</code></li>
+          <li style="list-style-type:none;">&nbsp;</li>
+
+          <strong>Script Settings</strong><br>
+          <li class="list-group-item"><b>Language</b>
+            <small class="label label-danger">REQUIRED</small><br>
+            Select Language and use Name of Files from <em>/in/lang/</em>
+            Folder and do not enter the Fileextention (.php) e.g. german or
+            custom if translatet!
+            <br><code>$page_language='english';</code></li>
+
+          <li class="list-group-item"><b>Theme Name</b>
+            <small class="label label-danger">REQUIRED</small><br>
+            Select one of the two given themes (milligram or gumba) or
+            build your own theme. The theme templates (only header.php and footer.php)
+            are saved in the <em>/inc/tpl/THEMENAME/</em> folder.
+            All files in the <em>/inc/tpl/</em> folder are
+            for the admin-mode and used by every theme.
+            <br><code>$page_tpl='milligram';</code></li>
+
+          <li class="list-group-item"><b>Title Tag</b><br>
+            Will be filled in the HTML Title-Tag on Startpage and
+            append on the Title-Tag in every post-page.
+            HINT: Use only a few characters.
+            <br><code>$page_title="PRABLO";</code></li>
+
+          <li class="list-group-item"><b>Description</b><br>
+            Could be used as Headline for your Startpage or
+            filled in the HTML Meta-Tag (Discription) of every Page.
+            HINT: The use of this parameter depends on the theme.
+            <br><code>$page_tagline="pragmatic blogging";</code></li>
+
+          <li class="list-group-item"><b>Footer</b><br>
+            Your can use this for a Copyright Hint e.g.
+            '&copy; 2017 Example Inc.'. HINT: Don't use HTML!
+            <br><code>$page_footer="powered by adilbo";</code></li>
+
+          <li class="list-group-item"><b>Truncate Value</b><br>
+            On the Startpage all Posts are shown with truncated
+            content. This value set the number of charaters.
+            HINT: If zero (0) is set, shurly no content is shown.
+            <br><code>$page_truncate=256;</code></li>
+
+          <li class="list-group-item"><b>Google Analytics Code</b><br>
+            If you enter your Tracking ID from Google Analytics the
+            Script automaticaly fill the needet JavaScript in every
+            Page and Google will track your visitors. HINT: Don't
+            forget to inform your visitors about the fact that they
+            will be tracked on your page.
+            <br><code>$page_analytics='UA-11223344-1';</code></li>
+
+          <li class="list-group-item"><b>Posts per Page</b><br>
+            Set the number of posts that the pagination should show on one
+            page. HINT: Don't set a value less than 2.
+            <br><code>$posts_per_page=7;</code></li>
+
+          <li class="list-group-item"><b>Use Lightbox?</b><br>
+            The usage of this parameter depends on the selected theme.
+            HINT: Set this to YES (true) if you use the 'gumba' theme,
+            click an image post and you will see the effect.
+            <br><code>$page_uselightbox=true;</code></li>
+
+          <li class="list-group-item"><b>Use Categories?</b><br>
+            This Script use a very easy implementation of categories.
+            If this is activated you can save on or more keywords
+            with a new post and this keywords are automaticaly the
+            categories. HINT: If you have already serveral categories
+            try to select an existing category if you submit a new post.
+            <br><code>$page_usecat=true;</code></li>
+
+          <li class="list-group-item"><b>Show Sidebar?</b><br>
+            Select of all pages should have a Sidebar.
+            HINT: If this is off it makes no sense to set e.g.
+            'Show Categories in Sidebar?' to YES (true) because
+            if there is no sidebar you will not see the categories
+            in the sidebar! <tt>;-)</tt>
+            <br><code>$page_sidebar=true;</code></li>
+
+          <li class="list-group-item"><b>Show Post-Date?</b><br>
+            Do you want to show the visitor the date of the post?
+            HINT: You could change this every time you like,
+            then the date is allways saved with every post.
+            <br><code>$page_showdate=true;</code></li>
+
+          <li class="list-group-item"><b>Show Categories in Sidebar?</b><br>
+            Do you want to show the visitor the categories of all post
+            in you sidebar? So you visitors can click a category link and
+            see all posts only from this category.
+            HINT: Remember, 'Show Sidebar' must be also set to YES (true).
+            <br><code>$page_catinsb=true;</code></li>
+
+          <li class="list-group-item"><b>Show Next and Previous Link after Post?</b><br>
+            Show navigation links to the next and previous post after each Post?
+            HINT: If there is not a big reason againt it set to YES (true),
+            it's nice for the user ans also for SEO.
+            <br><code>$page_nextprev=true;</code></li>
+
+          <li class="list-group-item"><b>Use Ping-O-Matic?</b><br>
+            It's a service to inform search engines that your blog has been updated.
+            The service is pinged on every new post and also on every update (change)
+            of a post.
+            HINT: So your postings will get into the searchindex of e.g. Google etc.
+            <br><code>$page_pingomatic=true;</code></li>
+
+          <li class="list-group-item"><b>Show Social-Media Share Buttons?</b><br>
+            Show the socialmedia chare button under the post for facebook, twitter,
+            pinterest and so on? HINT: Read more about this service on
+            <a target="_blank" href="http://www.sharethis.com/">www.sharethis.com</a>
+            <br><code>$page_socialmedia=true;</code></li>
+
+          <li class="list-group-item"><b>Show Post Comments?</b><br>
+            Let the visitor comment you postings? If set to YES (true)
+            each visitor can comment, if he use the Disqus service.
+            HINT: Read more about this service on
+            <a target="_blank" href="http://www.disqus.com/">www.disqus.com</a>
+            <br><code>$page_comments=true;</code></li>
+
+          <li class="list-group-item"><b>Use PRAGMATIC-BLOGGIN Feature?</b><br>
+          <big>This is the feature the script gets its name from.
+          If set to YES (true) the 'new post' form looks very different.
+          The admin can only give a Link to an interesting page and the
+          script try to write the post by it self. Give it a try, shurly you
+          can edit the content that is generated automaticaly!
+          HINT: Use this mode if you always write about other pages!</big>
+            <br><code>$page_urlblogger=true;</code></li>
+
+          <li class="list-group-item"><b>Auto Link the Categories in the Post Content?</b><br>
+            If set to YES (true) every content post is scanned and if there
+            is a category keyword it will be autoamticaly linked with all posts
+            of this category. HINT: Nice for the user and also for SEO!
+            <br><code>$page_crosslink=true;</code></li>
+
+          <li class="list-group-item"><b>Use Anti-Adblock Tool?</b><br>
+            Your Link-Roll contains Ads? If so you maybe want them be delivert
+            also if the user have an adblocker installed? So set this to YES (true)
+            and each visitor with an activated adblocker will see a hint to
+            please deactvate it. HINT: This will also work if you enter e.g.
+            ads direct into you template!
+            <br><code>$page_antiadblock=true;</code></li>
+
+          <li class="list-group-item"><b>Show "Best Posts" Links in Sidebar?</b><br>
+            If you have extern traffic from searchengines an intern function calculate
+            the best posts and show them in the sidebar.
+            HINT: The function show max. 7 posts!
+            <br><code>$page_hotlinks=true;</code></li>
+
+          <li class="list-group-item"><b>Show Seeking-Slot?</b><br>
+            Want to give the visitor the chance to search your blog?
+            Set this to YES (true) and the seeking-slot will be shown.
+            HINT: Activate this, search is a nice feature for your visitors!
+            <br><code>$page_seekingslot=true;</code></li>
+
+          <li class="list-group-item"><b>Show Link-Roll?</b><br>
+            Edit the <em>/roll/data.txt</em> file and put your HTML links
+            or adverts into this file. Each line must be one link or ad.
+            You can use the Placeholder {URL-TO-ROLL-FOLDER} for the URL
+            if you use Images.
+            HINT: Take a look at the examples and everything should be clear!
+            <br><code>$page_linkroll=true;</code></li>
+
+          <li class="list-group-item"><b>Number of Links in Link-Roll</b><br>
+            Define the max. number of links or ads that are randomly shown.
+            HINT: Don't set to zero (0) if you want to deactivate this, use
+            $page_linkroll=false;
+            <br><code>$page_linknumber=2;</code></li>
+
+          <li class="list-group-item"><b>Script installed correctly?</b><br>
+            This Parameter is <b>automaticaly set</b> by the <em>/inc/install.php</em> File.</em>
+            If the Script is installed the Value is set to <em>true</em>,
+            by default it is set to <em>false</em>.
+            Don't set this to <em>false</em> if your Script is already installed
+            or everybody can overwrite your Settings in <em>/inc/settings.php</em> File.
+            <br><code>$page_isinstalled=false;</code></li>
+          <li style="list-style-type:none;">&nbsp;</li>
+        </ul>
+				<p>
+          Set up the script to fit your specific site's needs.
+          All setting options have explanations over the specific field.
+        </p>
+				<div class="alertMsg info">
+					<div class="msgIcon pull-left"><i class="fa fa-info-circle"></i></div>
+					All parameters are set in the <em>/inc/settings.php</em>,
+          the database is only used for the content of the posts.
+				</div>
+        <div class="alertMsg warning" style="color:#444;">
+					<div class="msgIcon pull-left"><i class="fa fa-warning"></i></div>
+					If your Script is already installed and you whant to use the install.php
+          script again, set the Parameter <code>$page_isinstalled=false;</code> in the file
+          <em>/inc/settings.php</em>.
+				</div>
+
+<!-- ************************* -->
+<!-- ******* Localizations √ -->
+<!-- ************************* -->
+
+				<h2 id="locals" class="page-header">Localizations</h2>
+				<h3>1. Language Files</h3>
+				<p>
+					The script is translation ready.
+          The primary Localization files are located in the folder named <em>/inc/lang/</em>.<br>
+          If you want to use a different language other then English, you will need to
+					translate the <em>/inc/lang/english.php</em> file and<br>
+          save it under your language name e.g <em>/inc/lang/german.php<em>.<br>
+          Once translated, you can then load that file via the Global Site Setting
+          <code>$page_language='german';</code>
+          in the <em>/inc/settings.php</em> file.
+				</p>
+				<img src="assets/language.png" class="img-responsive img" />
+				<img src="assets/lang_files.png" class="img-responsive img" />
+
+				<h3>2. Date Formats</h3>
+				<p>
+					To change the way dates are formatted,
+          you will need to modify the <em>/inc/date.php</em> file.<br>
+          Follow the instructions in the file.<br />
+					<strong>Uncomment (remove the double slash - //)
+          from the date format you want to use</strong><br />
+					<strong>Comment (Add a double slash - //)
+          to the front of the date formats you do NOT want to use</strong>
+				</p>
+				<img src="assets/dates.png" class="img-responsive img" />
+
+<!-- ************************* -->
+<!-- ******* Styling √ -->
+<!-- ************************* -->
+
+				<h2 id="styling" class="page-header">Styling</h2>
+        <p>
+          While the script already has two modern interface you can develop your individual Template by your own!
+        </p>
+				<h3>Theme "milligram"</h3>
+				<p>
+					The first Template based on
+          <a href="http://milligram.io/" target="_blank">Milligramp</a>
+          (version 1.3.0), a minimalist CSS framework under MIT Licence.<br>
+          This is very easy, however, you will need to be able to write HTML/CSS code.<br>
+          For those that aren't versed, here is a quick overview.<br>
+          The easiest way to change the look is by editing the CSS file named <em>custom.css</em>.<br>
+          These files can be found in the template folder <em>/tpl/milligram/</em>.
+				</p>
+				<p>
+          The milligram.min.css file is the original, unmodified style,
+          and you should not alter this file.<br>
+          If you want to make any changes to the components,
+          you should add/modify the changes to the <em>custom.css</em> file only.
+        </p>
+				<p>The script uses only two images:</p>
+				<ul class="list-unstyled">
+					<li>Search-Icon: <code>search.png (21px x 21px)</code> magnifying glass in the seeking-slot</li>
+					<li>Favicon: <code>icon.png (60px x 60px)</code> shortcut icon</li>
+				</ul>
+				<p>
+          Some effects are integrated and they use JavaScript - all three files are found in the <em>/tpl/gumba/js/</em> folder:
+          <ul>
+          <li> jquery.1.11.min.js </li>
+          <li> jquery.fluidbox.min.js (Licensed under the MIT License)</li>
+          <li> milligram.js </li>
+          </ul>
+        </p>
+				<p>
+          Fluidbox, is a jQuery plugin for beautiful lightboxes.<br>
+          Check out all of details &amp; usage at: <a target="_blank" href="http://terrymun.github.io/Fluidbox/">http://terrymun.github.io/Fluidbox/</a>.<br>
+          If you want to use it remember to set the <code>$page_uselightbox = true;</code>
+          Parameter in the <em>/inc/settings.php</em> file.
+        </p>
+
+				<h3>Theme "gumba"</h3>
+				<p>
+					The second Template based on
+          <a href="https://github.com/dskanth/Gumba-Html5-Template" target="_blank">Gumba</a>
+          , a minimalist HTML5 template.<br>
+          This is very easy, however, you will need to be able to write HTML/CSS code.<br>
+          For those that aren't versed, here is a quick overview.<br>
+          The easiest way to change the look is by editing the CSS file named <em>custom.css</em>.<br>
+          These files can be found in the template folder <em>/tpl/gumba/</em>.
+				</p>
+				<p>
+          The gumba.css file is the original, unmodified style,
+          and you should not alter this file.<br>
+          If you want to make any changes to the components,
+          you should add/modify the changes to the <em>custom.css</em> file only.
+        </p>
+				<p>The script uses only two images:</p>
+				<ul class="list-unstyled">
+					<li>Search-Icon: <code>search.png (21px x 21px)</code> magnifying glass in the seeking-slot</li>
+					<li>Favicon: <code>icon.png (60px x 60px)</code> shortcut icon</li>
+				</ul>
+				<p>
+          Some effects are integrated and they use JavaScript - all three files are found in the <em>/tpl/gumba/js/</em> folder:
+          <ul>
+          <li> jquery.1.11.min.js </li>
+          <li> jquery.fluidbox.min.js (Licensed under the MIT License)</li>
+          <li> gumba.js </li>
+          </ul>
+        </p>
+				<p>
+          Fluidbox, is a jQuery plugin for beautiful lightboxes.<br>
+          Check out all of details &amp; usage at: <a target="_blank" href="http://terrymun.github.io/Fluidbox/">http://terrymun.github.io/Fluidbox/</a>.<br>
+          If you want to use it remember to set the <code>$page_uselightbox = true;</code>
+          Parameter in the <em>/inc/settings.php</em> file.
+        </p>
+
+<!-- ************************* -->
+<!-- ******* Help & Support √ -->
+<!-- ************************* -->
+
+				<h2 id="support" class="page-header">Help &amp; Support</h2>
+				<p>
+					Please, if you have any questions, run into any issues or just need some help,
+          do not hesitate to contact me via my
+          <a href="https://codecanyon.net/user/adilbo#contact" target="_blank">Support Form</a>.<br>
+					I believe in providing the best support possible.
+				</p>
+				<p><a href="https://codecanyon.net/user/adilbo#contact" target="_blank">
+        <img src="assets/support.png" class="img-responsive"></a></p>
+				<p>
+					If you are thinking of giving this script anything less then 5 Stars,
+          please tell me what I can do to make it a 5 Star experience for you.<br>
+					I love to hear feedback,
+          and welcome any suggestions you may have to make my software better.
+				</p>
+				<img src="assets/rating.png" class="img-responsive img" />
+
+<!-- ************************* -->
+<!-- ******* FTP √ -->
+<!-- ************************* -->
+
+				<h2 id="ftp" class="page-header">FTP Hint</h2>
+				<p>
+					If you are having problems with the script after successfully installing and
+          logging in the for the first time you should check your FTP software settings.<br>
+					I have found in many cases that numerous FTP programs are not uploading files correctly.
+				</p>
+				<p>
+					Check your FTP program to see if it is uploading files in ASCII -
+          which is causing the file code to be uploaded in one long line.<br>
+					Try changing it to Binary and uploading the files again.<br>
+          Upload everything except the settings file
+          (or better yet, if you have not started using the script,
+					just wipe the install and the database and reinstall a fresh copy).<br>
+					See the image how to set e.g.
+          <a href="https://filezilla-project.org/">FileZilla</a>
+          to binary transfer mode.
+				</p>
+				<img src="assets/ftp.png" class="img-responsive img" />
+
+<!-- ************************* -->
+<!-- ******* END √ -->
+<!-- ************************* -->
+
+			</div>
+		</div>
+	</div>
+  <script src="assets/jquery.js"></script>
+  <script src="assets/bootstrap.js"></script>
+</body>
+</html>

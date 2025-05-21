@@ -1,0 +1,6 @@
+<a target="_blank" href="#"><img src="{URL-TO-ROLL-FOLDER}/roll/ani1.gif"></a>
+<a target="_blank" href="#">Text Link 1</a>
+<a target="_blank" href="#"><img src="{URL-TO-ROLL-FOLDER}/roll/ani2.gif"></a>
+<a target="_blank" href="#"><img src="{URL-TO-ROLL-FOLDER}/roll/a1.gif"></a>
+<a target="_blank" href="#">Text Link 2</a>
+<a target="_blank" href="#"><img src="{URL-TO-ROLL-FOLDER}/roll/a2.gif"></a>
